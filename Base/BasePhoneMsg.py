@@ -9,7 +9,8 @@ import subprocess
 
 def stop_monkey(dev):
     monkey_name = "com.android.commands.monkey"
-    print("--------------------")
+    print("---------------------------")
+    print("liuruitest")
     pid = subprocess.Popen("adb -s " + dev + " shell ps | findstr " + monkey_name, shell=True, stdout=subprocess.PIPE,stderr=subprocess.PIPE).stdout.readlines()
     if pid =="":
         print("No monkey running in %s" % dev)
